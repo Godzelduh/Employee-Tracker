@@ -5,9 +5,9 @@
     "type": "module",
     "main": "server.js",
     "scripts": {
-      "build": "npc tsc",
+      "build": "npx tsc",
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "npm run build && node dist/index.js"
+      "start": "npm run build && node dist/server.js"
     },
     "dependencies": {
       "inquirer": "^9.3.6",
@@ -25,5 +25,7 @@
       "@types/express": "^4.17.21",
       "@types/pg": "^8.11.6",
       "typescript": "^5.2.2"
-    }
+    },
+    "include": ["src"],
+    "exclude": ["dist", "node_modules"]
   }
